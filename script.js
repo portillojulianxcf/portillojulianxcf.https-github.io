@@ -69,7 +69,57 @@ document.getElementById("buscador").addEventListener("keyup", function() {
     }
 });
 
-imagen de inicio publicitario 
+
+
+
+
+
+
+(function() {
+  const hero = document.querySelector('.mm-hero-media');
+  if (!hero) return;
+
+  const heroImg = hero.querySelector('img');
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Scroll reveal con IntersectionObserver */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        hero.classList.add('is-visible');
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target); // solo la primera vez
+      }
+    });
+  }, { threshold: 0.25 });
+  io.observe(hero);
+
+  /* Parallax sutil en scroll */
+  if (!prefersReduced && heroImg) {
+    hero.classList.add('parallax');
+    const maxShift = 20; // px máx arriba/abajo
+
+    const onScroll = () => {
+      const rect = hero.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // progreso: 0 cuando top en fondo, 1 cuando bottom arriba
+      const progress = (vh - rect.top) / (vh + rect.height);
+      const clamped = Math.max(0, Math.min(1, progress));
+      const shift = (clamped - 0.5) * 2 * maxShift; // -maxShift a +maxShift
+      heroImg.style.transform = `translateY(${shift.toFixed(1)}px) scale(1.05)`;
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll(); // inicial
+  }
+})();
+
+
+
+
+
   const heroImage = document.querySelector('.hero-image-container img');
 
   window.addEventListener('scroll', () => {
@@ -79,7 +129,7 @@ imagen de inicio publicitario
     const translateY = scrollY / 20;   // Movimiento vertical
     heroImage.style.transform = `scale(${scale}) translateY(${translateY}px)`;
   });
-</script>
+
 
 
 
