@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metalmontajes</title>
+  <link rel="stylesheet" href="estlos.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo metal.jpg" alt="img" style="height: 50px; width: auto;">
+    </div>
+    <h1>METALMONTAJES SV S.A.S</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <section id="inicio" class="hero">
+    <h1>Bienvenidos a METALMONTAJES MV S.A.S</h1>
+    <p>Montajes y soluciones estructurales</p>
+  
+    <!-- Motor de búsqueda -->
+    <div class="search-box">
+      <img src="img/logo metal.jpg" alt="Buscar" class="search-icon">
+      <input type="text" placeholder="Buscar servicios...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    
+  </section>
+
+  <section class="video-publicidad">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="img/video publicitario.mp4" type="video/mp4">
+      Tu navegador no admite la reproducción de video.
+    </video>
+    <div class="video-texto">
+      <h2>Conoce lo que hacemos</h2>
+      <a href="#catalogo" class="btn-video">Ver más</a>
+    </div>
+  </section> 
+
+  <section id="galeria" class="galeria">
+    <h3 class="section-title">Conoce mas sobre lo que hace nuetra epresa </h3>
+    <div class="imagen-grid">
+      <div class="imagen-bloque">
+        <img src="img/img 111.jpg" alt="Estructuras metálicas">
+        <p>Fabricación de estructuras metálicas</p>
+      </div>
+      <div class="imagen-bloque">
+        <img src="img/img 222.jpg" alt="Tuberías acero inoxidable">
+        <p> Ensamble de tuberías de productos alimenticios en acero inoxidable</p>
+      </div>
+      <div class="imagen-bloque">
+        <img src="img/img 666.jpg" alt="Maquinaria industrial">
+        <p> Movimiento de cargas y alineamiento de maquinaria industrial</p>
+      </div>
+      <div class="imagen-bloque">
+        <img src="img/img 333.jpg" alt="Mampostería">
+        <p>Imagen #4: Mampostería, obra blanca y gris</p>
+      </div>
+      <div class="imagen-bloque">
+        <img src="img/4444.jpg" alt="Mecánica industrial">
+        <p> Acompañamiento y apoyo en mecánica industrial especializada</p>
+      </div>
+      <div class="imagen-bloque">
+        <img src="img/img 555.jpg" alt="Soldadura especializada">
+        <p> Soldadura especializada industrial, aceros inoxidables, procesos TIG, MIG, MMAW</p>
+      </div>
+      <div class="imagen-bloque">
+        <img src="img/mejoramiento 8.jpg" alt="Nuevo servicio 1">
+        <p>Mejoramiento de procedimientos indutriales </p>
+      </div>
+      <div class="imagen-bloque">
+        <img src="img/limpieza 7.jpg" alt="Nuevo servicio 2">
+        <p>limpieza, mantenimiento preventivo correctivo y predictivo</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="catalogo">
+    <h3 class="section-title">Catálogo</h3>
+    <p class="centered">
+
+      <section id="galeria-interactiva" class="galeria-interactiva">
+        <h3 class="section-title">Galería Interactiva</h3>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <button onclick="mostrarInfo(1)"><img src="img/img1.jpg" alt="Proyecto 1"></button>
+      
+          </div>
+          <div class="galeria-item">
+            <button onclick="mostrarInfo(2)"><img src="img/img 2.jpg" alt="Proyecto 2"></button>
+          </div>
+          <div class="galeria-item">
+            <button onclick="mostrarInfo(3)"><img src="img/img 3.jpg" alt="Proyecto 3"></button>
+          </div>
+          <div class="galeria-item">
+            <button onclick="mostrarInfo(4)"><img src="img/img 4.jpg" alt="Proyecto 4"></button>
+          </div>
+        </div>
+      
+        <!-- Modal para información -->
+        <div id="info-menu" class="modal oculto">
+          <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarInfo()">&times;</span>
+            <h4 id="info-titulo"></h4>
+            <p id="info-descripcion"></p>
+          </div>
+        </div>
+      </section>
+      
+
+
+
+      Aquí encontrarás una muestra de nuestros proyectos, estructuras metálicas y soluciones industriales. 
+      Próximamente publicaremos nuestro catálogo interactivo en línea.
+    </p>
+  </section>
+
+  <section id="servicios">
+    <h3 class="section-title">Servicios</h3>
+    <p class="centered">
+      Mantenimiento industrial, estructuras metálicas, montajes especializados y soluciones integrales para tu industria.
+    </p>
+  </section>
+
+  <section id="nosotros">
+    <h3 class="section-title">¿Quiénes Somos?</h3>
+    <p class="centered">
+      Metalmontajes es una empresa líder en soluciones estructurales con experiencia en mantenimiento y montaje 
+      de sistemas industriales a lo largo del territorio colombiano.
+    </p>
+  </section>
+
+  <section id="contacto">
+    <h3 class="section-title">Contacto</h3>
+    <p class="centered">
+      Email: contacto@metalmontajes.com<br>
+      Teléfono: +57 XXX XXX XXXX<br>
+      Dirección: Colombia, sede principal en Valle del Cauca
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Metalmontajes. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+MOTOR DE BUSQUEDA 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
