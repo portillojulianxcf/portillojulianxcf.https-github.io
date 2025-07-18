@@ -69,5 +69,17 @@ document.getElementById("buscador").addEventListener("keyup", function() {
     }
 });
 
+imagen de inicio publicitario 
+  const heroImage = document.querySelector('.hero-image-container img');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    // Zoom leve y movimiento vertical
+    const scale = 1 + scrollY / 5000;  // Ajuste para zoom muy sutil
+    const translateY = scrollY / 20;   // Movimiento vertical
+    heroImage.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+  });
+</script>
+
 
 
